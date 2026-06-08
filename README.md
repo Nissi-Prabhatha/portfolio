@@ -1,51 +1,171 @@
-# Prabhatha Nissi Guntur — Nissi OS Portfolio
+# 🚀 Prabhatha Nissi Guntur
 
-Interactive recruiter operating system. Multi-file static site, ready for GitHub Pages.
+<div align="center">
 
-## Deploy (3 steps)
+### Software Engineer • Data Engineer • AI Engineer • Data Scientist
 
-```bash
-# 1. Replace your existing MyPortfolio repo contents with these files
-git add .
-git commit -m "Nissi OS: fusion portfolio redesign"
-git push origin main
-```
+Building scalable data platforms, intelligent AI systems, and cloud-native applications.
 
-Go to **Settings → Pages → Source: main branch / root**.
+🌐 Portfolio: https://nissi-prabhatha.github.io/portfolio
 
-## Files
+💼 LinkedIn: https://linkedin.com/in/nissi-guntur
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Main portfolio structure |
-| `styles.css` | Full responsive styling + dark/light themes |
-| `script.js` | All interactivity: particles, cursor, role switcher, terminal, counters, AI chatbot |
-| `assets/Prabhatha_Nissi_Guntur_Resume.pdf` | Your resume (add this file manually) |
+📧 Email: pnissiguntur@gmail.com
 
-## Customize
+</div>
 
-### Google Analytics
-In `index.html`, replace both instances of `G-XXXXXXXXXX` with your GA4 Measurement ID:
-- Get it at: analytics.google.com → Admin → Data Streams → Web Stream
+---
 
-### Contact Form (optional)
-The email link goes to mailto directly. For a form, sign up at formspree.io.
+## 👋 About Me
 
-### Resume PDF
-Create an `assets/` folder and place your resume as `Prabhatha_Nissi_Guntur_Resume.pdf`.
+I'm a Software Engineer, Data Engineer, AI Engineer, and Data Scientist passionate about building systems that solve real-world problems at scale.
 
-### Updating project GitHub links
-In `script.js`, find the `projects` array and update each `<a href="https://github.com/Nissi-Prabhatha">` with your actual repo URLs once created.
+My work focuses on data engineering, machine learning, artificial intelligence, backend development, cloud platforms, and analytics. I enjoy transforming complex datasets into actionable insights and building products that create measurable impact.
 
-## Features
+---
 
-- 🎨 Dark/light mode toggle
-- ✨ Particle constellation background (mouse-reactive)
-- 🖱️ Custom cursor with ring
-- 💻 Animated code terminal in hero (types line by line)
-- 📊 Animated impact counters
-- 🎯 Recruiter Mode role switcher (DE / DS / AI / SWE / DA)
-- 🔬 Three interactive labs: ATS Matcher · Command Center · System Blueprint
-- 🤖 AI chatbot (knows full background, skills, visa status)
-- 📱 Fully mobile responsive
-- 🔒 No external APIs needed — everything works offline
+## 📊 Impact at a Glance
+
+- 🚀 3+ Years of Professional Experience
+- 📈 100M+ Records Processed
+- 👥 11,000+ Users Supported
+- ⚡ Up to 30% Performance Improvements
+- 🎯 99.9% Data Accuracy
+- 🤖 Production AI & ML Systems
+- ☁️ Cloud-Native Architecture Experience
+
+---
+
+## 🛠️ Core Expertise
+
+### Software Engineering
+
+- Python
+- Java
+- JavaScript
+- TypeScript
+- FastAPI
+- Flask
+- Node.js
+- React
+
+### Data Engineering
+
+- Snowflake
+- Airflow
+- Apache Spark
+- Kafka
+- Databricks
+- PostgreSQL
+- MySQL
+
+### Artificial Intelligence & Machine Learning
+
+- LangChain
+- RAG Systems
+- LLM Integration
+- TensorFlow
+- PyTorch
+- Scikit-Learn
+- NLP
+- Feature Engineering
+- Statistical Modeling
+
+### Cloud & DevOps
+
+- AWS
+- GCP
+- Docker
+- Kubernetes
+- Terraform
+- GitHub Actions
+
+### Analytics & Visualization
+
+- Tableau
+- Power BI
+- Streamlit
+- Plotly
+- ThoughtSpot
+
+---
+
+## 🚀 Featured Projects
+
+### AI Resume Analyzer
+
+An intelligent ATS optimization platform that analyzes resumes and provides actionable recommendations for improving interview success.
+
+### Multi-Agent Research Assistant
+
+An AI-powered research platform that uses multiple agents to gather, summarize, and synthesize information from diverse sources.
+
+### Real-Time Data Processing Platform
+
+A scalable streaming architecture designed to process large volumes of data and generate near real-time insights.
+
+### Customer Churn Prediction System
+
+An end-to-end machine learning solution for identifying customer retention risks and supporting business decision-making.
+
+### Monetization Growth Analytics Platform
+
+A machine learning and experimentation framework supporting analytics, forecasting, and business intelligence initiatives.
+
+---
+
+## 📈 Areas of Interest
+
+- Artificial Intelligence
+- Agentic AI
+- Data Engineering
+- Machine Learning Engineering
+- Software Engineering
+- Cloud Architecture
+- Distributed Systems
+- Analytics Engineering
+
+---
+
+## 🎓 Education
+
+### Master of Science in Computer Science
+
+New Jersey Institute of Technology
+
+### Bachelor of Technology in Computer Science
+
+Lovely Professional University
+
+---
+
+## 🏆 Highlights
+
+- Performance Excellence Award Recipient
+- Published Research in Deep Learning & Computer Vision
+- Built Production AI & Data Solutions
+- Experience Across Software, Data, and AI Domains
+
+---
+
+## 🤝 Let's Connect
+
+I'm always interested in discussing:
+
+- Software Engineering
+- Data Engineering
+- AI Engineering
+- Machine Learning
+- Data Science
+
+📧 Email: pnissiguntur@gmail.com
+
+💼 LinkedIn: https://linkedin.com/in/nissi-guntur
+
+🌐 Portfolio: https://nissi-prabhatha.github.io/portfolio
+
+🐙 GitHub: https://github.com/Nissi-Prabhatha
+
+---
+
+⭐ Feel free to explore my repositories and connect with me.
