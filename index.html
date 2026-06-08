@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Prabhatha Nissi Guntur — Data Engineer, AI/ML Engineer & Software Engineer. 4+ years. Apple-scale pipelines. LLM/RAG systems."/>
+<title>Prabhatha Nissi Guntur — Data & AI Engineer</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233b82f6'/><text x='16' y='23' text-anchor='middle' font-family='Arial Black' font-weight='900' font-size='18' fill='white'>N</text></svg>"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="noise"></div>
+<div id="cur"></div><div id="curR"></div>
+
+<!-- ── NAV ── -->
+<header class="nav-bar" id="navBar">
+  <a class="nav-brand" href="#home"><span class="nb-logo">PNG<span class="nb-dot">.</span></span><span class="nb-tag">Data &amp; AI Engineer</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#recruiter">Recruiter Mode</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#labs">Labs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button id="themeBtn" title="Toggle theme">◐</button>
+    <a class="nav-resume" href="assets/Prabhatha_Nissi_Guntur_Resume.pdf" target="_blank">Resume ↗</a>
+    <button class="nav-menu" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main>
+<!-- ════════════════════ HERO ════════════════════ -->
+<section id="home" class="s-hero">
+  <div class="hero-wrap">
+    <div class="hero-left reveal">
+
+      <!-- Available status line — no name redundancy -->
+      <div class="hero-identity">
+        <span class="hi-dot"></span>
+        <span class="hi-avail">Open to new roles · DE / AI / SWE / DS</span>
+      </div>
+
+      <div class="hero-roles">
+        <span class="role-pill active">Data Engineer</span>
+        <span class="role-pill">AI / LLM Builder</span>
+        <span class="role-pill">Software Engineer</span>
+        <span class="role-pill">Data Scientist</span>
+      </div>
+
+      <!-- IMPACT IS THE HEADLINE — like Srujit's bold statement -->
+      <h1 class="hero-impact">
+        Apple-scale pipelines.<br/>
+        Production AI that ships.<br/>
+        <em>Full stack, end-to-end.</em>
+      </h1>
+
+      <div class="hero-badges">
+        <span class="badge-green"><b></b>Actively interviewing</span>
+        <span class="badge-blue">F-1 STEM OPT · United States</span>
+        <span class="badge-purple">4+ Years Experience</span>
+      </div>
+
+      <p class="hero-desc">I built pipelines processing <strong>10M+ transactions daily</strong> at Apple Music, led an <strong>80% cost-saving</strong> Teradata→Snowflake migration, and ship production LLM/RAG systems at JerseySTEM. From schema design to deployed API — I own it all.</p>
+
+      <div class="hero-btns">
+        <a class="btn-solid" href="#projects">See My Work ↓</a>
+        <a class="btn-outline" href="#recruiter">Recruiter Mode →</a>
+      </div>
+
+      <div class="impact-row">
+        <div class="ir"><span>10M+</span><small>transactions / day</small></div>
+        <div class="ir"><span>80%</span><small>cost reduction</small></div>
+        <div class="ir"><span>50%</span><small>faster pipelines</small></div>
+        <div class="ir"><span>4+</span><small>yrs production</small></div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal delay-1">
+
+      <!-- CYBER PROFILE CARD -->
+      <div class="cyber-card">
+        <div class="cyber-scan"></div>
+        <div class="cyber-photo-wrap">
+          <img src="data:image/jpeg;base64,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" alt="Prabhatha Nissi Guntur" class="cyber-photo"/>
+          <div class="cyber-overlay"></div>
+          <div class="cyber-corner tl"></div>
+          <div class="cyber-corner tr"></div>
+          <div class="cyber-corner bl"></div>
+          <div class="cyber-corner br"></div>
+          <div class="cyber-hline"></div>
+        </div>
+        <div class="cyber-info">
+          <div class="cyber-name">PRABHATHA NISSI GUNTUR</div>
+          <div class="cyber-tag">DATA &amp; AI ENGINEER</div>
+          <div class="cyber-stats">
+            <div class="cs-item"><span>EXP</span><b>4+ YRS</b></div>
+            <div class="cs-item"><span>VISA</span><b>F-1 OPT</b></div>
+            <div class="cs-item"><span>LOC</span><b>US</b></div>
+          </div>
+          <div class="cyber-bar"><div class="cyber-bar-fill"></div></div>
+          <div class="cyber-status"><span class="cs-dot"></span>ACTIVELY INTERVIEWING</div>
+        </div>
+      </div>
+
+      <!-- CODE TERMINAL -->
+      <div class="code-terminal">
+        <div class="ct-bar">
+          <span class="ct-dot r"></span><span class="ct-dot y"></span><span class="ct-dot g"></span>
+          <span class="ct-title">nissi_profile.py</span>
+        </div>
+        <div class="ct-body" id="termBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ DASHBOARD ════════════════════ -->
+<section id="dashboard" class="section bg2">
+  <div class="section-head reveal">
+    <p class="eyebrow">Impact Dashboard</p>
+    <h2>Recruiter-readable proof<br/>in ten seconds.</h2>
+    <p class="section-sub">Numbers, systems, and signals that work for technical recruiters, hiring managers, and staffing teams — across DE, DS, AI, SWE, and DA roles.</p>
+  </div>
+  <div class="dash-grid reveal delay-1">
+    <article class="dash-card">
+      <div class="dc-num" data-target="10" data-suffix="M+">0</div>
+      <div class="dc-label">records / day</div>
+      <p>Apple Music royalty pipelines on Kafka + Spark + Snowflake. Real Apple-scale engineering.</p>
+    </article>
+    <article class="dash-card">
+      <div class="dc-num" data-target="80" data-suffix="%">0</div>
+      <div class="dc-label">cost reduction</div>
+      <p>Teradata → Snowflake migration across 70% of apps. Deployment costs slashed, speed up 50%.</p>
+    </article>
+    <article class="dash-card">
+      <div class="dc-num" data-target="40" data-suffix="%">0</div>
+      <div class="dc-label">manual work eliminated</div>
+      <p>LLM/RAG workflows and dbt automation reducing reporting overhead at JerseySTEM.</p>
+    </article>
+    <article class="dash-card highlight">
+      <div class="dc-num">🏆</div>
+      <div class="dc-label">TCS Excellence Award</div>
+      <p>Performance Excellence Award for Apple Music pipeline delivery. Recognised for production quality and reliability under scale.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════════ RECRUITER MODE ════════════════════ -->
+<section id="recruiter" class="section">
+  <div class="section-head reveal">
+    <p class="eyebrow">Recruiter Mode</p>
+    <h2>One engineer. Five hiring angles.</h2>
+    <p class="section-sub">Click a role to instantly see the value proposition, story, and keyword stack for that hiring path.</p>
+  </div>
+  <div class="role-tabs reveal delay-1">
+    <button class="rtab active" data-role="de">Data Engineer</button>
+    <button class="rtab" data-role="ds">Data Scientist</button>
+    <button class="rtab" data-role="ai">AI/ML Engineer</button>
+    <button class="rtab" data-role="swe">Software Engineer</button>
+    <button class="rtab" data-role="da">Data Analyst</button>
+  </div>
+  <div class="role-panel reveal delay-2">
+    <div class="rp-left">
+      <p class="rp-kicker">Best fit for</p>
+      <h3 id="roleTitle"></h3>
+      <p id="roleStory"></p>
+    </div>
+    <div class="rp-right">
+      <p class="rp-kicker">Signal Stack</p>
+      <div class="rp-stack" id="roleStack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ EXPERIENCE ════════════════════ -->
+<section id="experience" class="section bg2">
+  <div class="section-head reveal">
+    <p class="eyebrow">Experience Timeline</p>
+    <h2>Problem → System → Impact.</h2>
+    <p class="section-sub">4+ years of production work — from startup analytics to Apple Music scale.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Software Engineer — AI & Data</h3>
+          <span>JerseySTEM · Feb 2025 – Present</span>
+        </div>
+        <div class="tl-cols">
+          <div><b>Problem</b><p>Teams needed AI-powered automation over 500+ records and faster, reliable reporting workflows.</p></div>
+          <div><b>System</b><p>LangChain RAG pipelines over Snowflake, dbt transformation models, RBAC dashboards with Handshake API integration.</p></div>
+          <div><b>Impact</b><p>40% less manual effort · 70% of UI bugs resolved · Real-time sync across 3 permission tiers.</p></div>
+        </div>
+        <div class="tl-tags"><span>LangChain</span><span>RAG</span><span>Snowflake</span><span>dbt</span><span>Python</span><span>RBAC</span></div>
+      </div>
+    </article>
+
+    <article class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Graduate Teaching Assistant</h3>
+          <span>NJIT · Jun 2024 – Dec 2024</span>
+        </div>
+        <div class="tl-cols">
+          <div><b>Problem</b><p>100+ graduate students needed hands-on support in Python, data structures, and applied CS.</p></div>
+          <div><b>System</b><p>Automated grading workflows with Python scripting, mentored students through complex programming challenges.</p></div>
+          <div><b>Impact</b><p>99% on-time grading delivery · 100+ students supported · Improved outcomes across cohort.</p></div>
+        </div>
+        <div class="tl-tags"><span>Python</span><span>DSA</span><span>Automation</span><span>R</span></div>
+      </div>
+    </article>
+
+    <article class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Data Engineer — Apple Music & Revenue Intelligence</h3>
+          <span>TCS · Client: Apple Inc. · Jan 2021 – Dec 2022</span>
+        </div>
+        <div class="tl-cols">
+          <div><b>Problem</b><p>Apple Music royalty systems required accurate, scalable real-time processing across massive datasets with zero-data-loss guarantees.</p></div>
+          <div><b>System</b><p>Kafka + Spark real-time pipelines, Teradata → Snowflake migration, Airflow ETL orchestration, GBI PX4 financial reporting pipelines.</p></div>
+          <div><b>Impact</b><p>10M+ txn/day · 80% cost reduction · 50% faster processing · 40% reliability gain · TCS Performance Excellence Award.</p></div>
+        </div>
+        <div class="tl-tags"><span>Kafka</span><span>Spark</span><span>Snowflake</span><span>Airflow</span><span>AWS</span><span>Teradata</span><span>SQL</span><span>Python</span></div>
+      </div>
+    </article>
+
+    <article class="tl-item reveal">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <h3>Software Engineer — Data & Analytics</h3>
+          <span>Techno Spark IT Solutions · Jul 2020 – Dec 2020</span>
+        </div>
+        <div class="tl-cols">
+          <div><b>Problem</b><p>Clients needed reliable data pipelines to replace slow, error-prone manual reporting workflows.</p></div>
+          <div><b>System</b><p>Python and SQL ETL pipelines for multi-source data ingestion and real-time analytical dashboards.</p></div>
+          <div><b>Impact</b><p>Reduced manual overhead · Repeatable data workflows · Foundation of production DE career.</p></div>
+        </div>
+        <div class="tl-tags"><span>Python</span><span>SQL</span><span>ETL</span><span>Dashboards</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════════ PROJECTS ════════════════════ -->
+<section id="projects" class="section">
+  <div class="section-head reveal">
+    <p class="eyebrow">Architecture Gallery</p>
+    <h2>Systems built for real problems.</h2>
+    <p class="section-sub">Business problem, technical architecture, challenge overcome, measurable impact — not just a list of technologies.</p>
+  </div>
+  <div class="proj-filters reveal delay-1">
+    <button class="pf active" data-f="all">All</button>
+    <button class="pf" data-f="data">Data Engineering</button>
+    <button class="pf" data-f="ai">AI / LLM</button>
+    <button class="pf" data-f="analytics">Analytics</button>
+    <button class="pf" data-f="backend">Backend / SWE</button>
+  </div>
+  <div class="proj-grid" id="projGrid"></div>
+</section>
+
+<!-- ════════════════════ SKILLS ════════════════════ -->
+<section id="skills" class="section bg2">
+  <div class="section-head reveal">
+    <p class="eyebrow">Technical Stack</p>
+    <h2>The full stack.</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="reveal">
+      <p class="sk-cat">Data & Cloud</p>
+      <div class="sk-bars">
+        <div class="skb"><div class="skb-top"><span>Snowflake / SQL</span><span>95%</span></div><div class="skb-track"><div class="skb-fill" data-w="95"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>Apache Kafka</span><span>88%</span></div><div class="skb-track"><div class="skb-fill" data-w="88"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>Apache Spark</span><span>85%</span></div><div class="skb-track"><div class="skb-fill" data-w="85"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>Airflow / dbt</span><span>90%</span></div><div class="skb-track"><div class="skb-fill" data-w="90"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>AWS (S3, Lambda, Redshift)</span><span>82%</span></div><div class="skb-track"><div class="skb-fill" data-w="82"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>Docker / Kubernetes</span><span>78%</span></div><div class="skb-track"><div class="skb-fill" data-w="78"></div></div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="sk-cat">AI / LLM / Software</p>
+      <div class="sk-bars">
+        <div class="skb"><div class="skb-top"><span>Python</span><span>95%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="95"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>LangChain / RAG</span><span>85%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="85"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>LLM / Prompt Engineering</span><span>82%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="82"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>FastAPI / Flask</span><span>88%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="88"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>React / JavaScript</span><span>72%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="72"></div></div></div>
+        <div class="skb"><div class="skb-top"><span>TensorFlow / PyTorch</span><span>75%</span></div><div class="skb-track"><div class="skb-fill teal" data-w="75"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sk-pills reveal">
+    <span>PostgreSQL</span><span>MongoDB</span><span>Oracle/PL-SQL</span><span>Teradata</span>
+    <span>Redis</span><span>GCP</span><span>Hadoop</span><span>Pandas</span><span>Scikit-learn</span>
+    <span>Tableau</span><span>Power BI</span><span>ThoughtSpot</span><span>GitHub Actions</span>
+    <span>CI/CD</span><span>Bash</span><span>R</span><span>Scala</span><span>Vector DBs</span><span>OpenAI API</span>
+  </div>
+</section>
+
+<!-- ════════════════════ LABS ════════════════════ -->
+<section id="labs" class="section">
+  <div class="section-head reveal">
+    <p class="eyebrow">Interactive Labs</p>
+    <h2>Not just a portfolio —<br/>a product demo.</h2>
+    <p class="section-sub">Three interactive widgets for recruiters and hiring managers to explore fit in real time.</p>
+  </div>
+  <div class="labs-grid">
+    <article class="lab-card reveal">
+      <div class="lab-icon">🎯</div>
+      <h3>ATS Role Matcher</h3>
+      <p>Select a role and see Nissi's keyword alignment score instantly.</p>
+      <select id="atsSelect">
+        <option>Data Engineer</option><option>Data Scientist</option>
+        <option>AI/ML Engineer</option><option>Software Engineer</option><option>Data Analyst</option>
+      </select>
+      <div class="ats-score"><span id="atsScore">94</span><small>% keyword match</small></div>
+      <p id="atsText" class="lab-output">Strong match: Python, SQL, Snowflake, Airflow, Spark, AWS, dbt, Kafka, ETL and data quality.</p>
+    </article>
+    <article class="lab-card reveal delay-1">
+      <div class="lab-icon">⌨️</div>
+      <h3>Command Center</h3>
+      <p>Query Nissi's profile. Try: <code>skills</code> · <code>impact</code> · <code>experience</code> · <code>visa</code></p>
+      <div class="cmd-terminal">
+        <div id="cmdOut">$ welcome — type a command and press Enter</div>
+        <div class="cmd-input-row"><span>$</span><input id="cmdIn" placeholder="skills" autocomplete="off"/></div>
+      </div>
+    </article>
+    <article class="lab-card reveal delay-2">
+      <div class="lab-icon">🏗️</div>
+      <h3>System Blueprint</h3>
+      <p>Click each layer to explore the data + AI platform architecture.</p>
+      <div class="blueprint-btns">
+        <button class="bp-btn active" data-bp="ingest">Ingest</button>
+        <button class="bp-btn" data-bp="process">Process</button>
+        <button class="bp-btn" data-bp="model">Model</button>
+        <button class="bp-btn" data-bp="serve">Serve</button>
+      </div>
+      <p id="bpText" class="lab-output">Ingest: Kafka streams, S3 files, REST APIs, database CDC, and third-party feeds.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ════════════════════ CONTACT ════════════════════ -->
+<section id="contact" class="section bg2">
+  <div class="contact-wrap reveal">
+    <p class="eyebrow">Let's work together</p>
+    <h2>Open to Data, AI &amp;<br/>Software roles across the US.</h2>
+    <p class="section-sub">Remote · Hybrid · On-site &nbsp;·&nbsp; F-1 STEM OPT · No sponsorship needed &nbsp;·&nbsp; Available now</p>
+    <div class="contact-links">
+      <a class="cl-primary" href="mailto:pnissiguntur@gmail.com">📧 Email Me</a>
+      <a href="https://www.linkedin.com/in/prabhatha-nissi-guntur/" target="_blank">LinkedIn ↗</a>
+      <a href="https://github.com/Nissi-Prabhatha" target="_blank">GitHub ↗</a>
+      <a href="assets/Prabhatha_Nissi_Guntur_Resume.pdf" target="_blank">Resume ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><p>© <span id="yr"></span> Prabhatha Nissi Guntur &nbsp;·&nbsp; <a href="https://github.com/Nissi-Prabhatha/portfolio" target="_blank">Source ↗</a></p></footer>
+
+<!-- AI CHAT -->
+<button id="aiBtn" onclick="toggleChat()"><span class="ai-pulse"></span>Ask Nissi's AI ✨</button>
+<div id="aiModal">
+  <div class="ai-head">
+    <div class="ai-av">🤖</div>
+    <div><div class="ai-nm">Nissi's AI Assistant</div><div class="ai-st">● Online · Ready to answer</div></div>
+    <button class="ai-x" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="ai-msgs" id="aiMsgs"></div>
+  <div class="ai-quick">
+    <button onclick="askAI('What did she build at Apple?')">Apple work?</button>
+    <button onclick="askAI('What is her strongest skill?')">Top skill?</button>
+    <button onclick="askAI('What visa does she have?')">Visa status?</button>
+    <button onclick="askAI('Is she senior level?')">Senior?</button>
+  </div>
+  <div class="ai-input-row">
+    <input id="aiIn" placeholder="Ask anything about Nissi..." onkeydown="if(event.key==='Enter')sendAI()"/>
+    <button onclick="sendAI()">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
